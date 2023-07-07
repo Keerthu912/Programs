@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+int pairSum(int n, int arr[],int sum){
+    for(int i=0; i<n; i+=1){
+        for(int j=i+1; j<n; j+=1){
+            if(arr[i]+arr[j]== sum)
+                cout<<"Pairs are: "<<arr[i]<<" "<<arr[j]<<endl;
+        }
+    }
+    return 0;
+};
+int main(){
+    int n,sum;
+    cout<<"Size of array: ";
+    cin>>n;
+    int arr[n];
+    cout<<"Array: ";
+    for(int i=0; i<n; i+=1){
+        cin>>arr[i];
+    }
+    cout<<"Sum value: ";
+    cin>>sum;
+    int res = pairSum(n,arr,sum);
+}
+--Time Complexity: O(N^2)
