@@ -1,0 +1,15 @@
+Method 1(ternary-divisible):
+#include <stdio.h>
+int main(void) {
+  int num;
+  scanf("%d",&num);
+   (num%2==0)?printf("even") : printf("odd");
+}
+
+Method 2(bitwise):
+#include <stdio.h>
+int main(void) {
+  int num;
+  scanf("%d",&num);
+   ((num&1)==0)?printf("even") : printf("odd");
+}

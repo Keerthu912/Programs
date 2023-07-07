@@ -1,0 +1,19 @@
+//Method 1:
+#include<iostream>
+using namespace std;
+int main(){
+    int num;
+    cout<<"Array size: ";
+    cin>>num;
+    int arr[num];
+    cout<<"Array: ";
+    for(int i=0; i<num; i+=1)
+        cin>>arr[i];
+    int key;
+    cout<<"key: ";
+    cin>>key;
+    for(int i=0; i<num; i+=1)
+        if(arr[i]==key)
+            cout<<"Index of the Key:"<<i;
+        cout<<"Element not found";
+}

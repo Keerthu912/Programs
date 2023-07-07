@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include<math.h>
+
+int order(int x){
+    int len = 0;
+    while(x != 0){
+        len++;
+        x /= 10;
+    }
+    return len;
+}
+int armStrong(int num,int len){
+    int sum = 0;
+    int digit = num;
+    while(digit != 0){
+        int temp = digit % 10;
+        sum = sum + pow(temp,len);
+        digit /= 10;
+    }
+    return sum;
+}
+
+int main()
+{
+    int len;
+    int sum;
+    int num;
+    scanf("%d",&num);
+    len = order(num);
+    sum = armStrong(num,len);
+    printf("%d\n", sum);
+    if(num==sum)
+        printf("Armstrong");
+    else
+        printf("Not Armstrong");
+}

@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main()
+{
+    int range;
+    scanf("%d",&range);
+    int prev = 0;
+    int curr = 1;
+    printf("%d %d ",prev,curr);
+    int next;
+    for(int i=2; i<=range; i+=1)
+    {
+        next = prev + curr;
+        prev = curr;
+        curr = next;
+        printf("%d ",next);
+    }
+}

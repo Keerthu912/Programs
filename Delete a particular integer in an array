@@ -1,0 +1,33 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+    int N,i,found=0;
+    cout<<"Size: ";
+    cin>>N;
+    int arr[N];
+    for(i=0;i<N; i++){
+        cin>>arr[i];
+    }
+    
+    int del;
+    cout<<"Number to be deleted: ";
+    cin>>del;
+    for(i=0; i<N; i++){
+        if(arr[i]==del){
+            for(int j=i; j<N-1; j++)
+                arr[j]=arr[j+1];
+            found=1;
+            i--;
+            N--;
+    }
+}
+    if(found==0)
+        cout<<"No such Element";
+    else
+        for(i=0; i<N; i++){
+            cout<<arr[i]<<" ";
+    }
+    return 0;
+    
+}

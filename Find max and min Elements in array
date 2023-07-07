@@ -1,0 +1,68 @@
+//using loops
+#include <iostream>
+using namespace std;
+void getMinMax(int arr[],int len){
+    int min=arr[0];
+    int max=arr[0];
+    for(int i=0; i<len; i++){
+        if(arr[i]<min)
+            min = arr[i];
+        if(arr[i]>max)
+            max = arr[i];
+    }
+    cout<<"Min ="<<min<<endl;
+    cout<<"Max ="<<max<<endl;
+}
+int main()
+{
+    int arr[]={1,5,4,2,3};
+    int len = 5;
+    getMinMax(arr,len);
+    return 0;
+}
+
+//user-input
+#include <iostream>
+
+using namespace std;
+
+void getMinMax(int arr[],int len){
+    int min=arr[0];
+    int max=arr[0];
+    for(int i=0; i<len; i++){
+        if(arr[i]<min)
+            min = arr[i];
+        if(arr[i]>max)
+            max = arr[i];
+    }
+    cout<<"Min ="<<min<<endl;
+    cout<<"Max ="<<max<<endl;
+}
+
+int main()
+{
+    int len;
+    cin>>len;
+    int arr[len];
+    for(int j=0; j<len; j++){
+        cin>>arr[j];
+    }
+    getMinMax(arr,len);
+
+    return 0;
+}
+
+//in-built function
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+    int n;
+    cin>>n;
+    int arr[n];
+    for(int i=0; i<n; i++){
+        cin>>arr[i];
+    }
+    cout<<"Min ="<<(*min_element(arr,arr+n))<<endl;
+    cout<<"Max ="<<(*max_element(arr,arr+n));
+    
+}

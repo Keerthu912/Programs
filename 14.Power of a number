@@ -1,0 +1,27 @@
+method 01:
+#include<stdio.h>
+int main(){
+    int base,expo;
+    scanf("%d %d",&base, &expo);
+    int res = 1;
+    while(expo !=0)
+    {
+        res *= base;
+        --expo;
+    }
+    printf("%d",res);
+    return 0;    
+}
+
+
+method 02:
+#include<stdio.h>
+#include<math.h>
+int main(){
+    int base,expo;
+    scanf("%d %d",&base, &expo);
+    int res = pow(base,expo);
+    printf("%d",res);
+    return 0;
+    
+}

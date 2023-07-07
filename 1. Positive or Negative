@@ -1,0 +1,25 @@
+Method 01 (if-else):
+#include <stdio.h>
+int main(void) {
+  int num;
+  scanf("%d",&num);
+  if(num>0)
+    printf("positive");
+  else
+    if(num<0)
+      printf("negative");
+    else
+      printf("zero");
+  return 0;
+}
+
+Method 02 (ternary operator):
+#include <stdio.h>
+int main(void) {
+  int num;
+  scanf("%d",&num);
+  if(num==0)
+    printf("zero");
+  else
+    (num>0)?printf("positive") : printf("negative");
+}
