@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct node{
+        int data;
+        struct node* next;
+    };
+    
+void addValue(struct node ** head, int val){
+    struct node* newnode = malloc(sizeof(struct node));
+    newnode->data = val;
+    newnode->next = *head;
+    *head = newnode;
+};
+
+void printValue(struct node *head){
+    struct node *temp = head;
+    while(temp != NULL){
+        printf("%d->", temp->data);
+        temp = temp->next;
+    }
+    printf("NULL");
+}
+
+int main(){
+    struct node *head = NULL;
+    int node;
+    printf("Enter the number of node to be created: ");
+    scanf("%d",&node);
+    for(int i=0; i<node; i+=1){
+        int add;
+        scanf("%d",&add);
+        addValue(&head, add);
+    }
+    printValue(head);
+}
+
+-----------------------------------------------------
+OUTPUT:
+Enter the number of node to be created: 3
+10
+20
+30
+30->20->10->NULL
