@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+char maxOccurance(string s){
+    
+    unordered_map<char,int> m;
+    int n = s.length();
+    int count = 0;
+    char ans;
+    
+    for(int i=0; i<n; i+=1){
+        m[s[i]]++;
+    
+    if(count < m[s[i]]){
+        ans = s[i];
+        count = m[s[i]];
+    }
+}
+    return ans;
+}
+
+
+
+int main(){
+    string s="keerthi";
+    cout<<maxOccurance(s);
+    return 0; 
+}
