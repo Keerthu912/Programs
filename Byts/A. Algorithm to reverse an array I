@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+void reverseArray(int arr[], int n){
+   int start = 0;
+   int end = n-1;
+   int temp;
+   while(start<end){
+       temp = arr[start];
+       arr[start] = arr[end];
+       arr[end]=temp;
+       start++;
+       end--;
+   }
+   cout<<"Reverse: ";
+   for(int k=0; k<n; k+=1){
+       cout<<arr[k]<<" ";
+   }
+}
+
+int main(){
+    int arr[]={20,40,60,80,100};
+    int n = 5;
+    
+    reverseArray(arr,n);
+    return 0;
+}
