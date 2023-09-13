@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+void rotateArray(int arr[], int n,int k){
+   int temp[n];
+   int m = 0;
+   for(int i=k; i<n; i+=1){
+       temp[m++]=arr[i];
+       
+   }
+   for(int j=0; j<k; j+=1){
+       temp[m++]=arr[j];
+       
+   }
+   for (int i = 0; i < n; i++) {
+        arr[i] = temp[i];
+    }
+    for(int i=0; i<n; i+=1){
+        cout<<arr[i]<<" ";
+    }
+}
+
+int main(){
+    int arr[]={1, 2, 3, 4, 5, 6, 7};
+    int n = 7;
+    int k = 4;
+    
+    rotateArray(arr,n,k);
+    return 0;
+}
